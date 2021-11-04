@@ -8,6 +8,6 @@ db:
 system_pass:
   admin: "admin@123"
   
-email_sender:
-  email: "kalim.resource@gmail.com"
-  pass: '@&&@+7'
+#email_sender:
+#  email: "kalim.resource@gmail.com"
+#  pass: '@&&@+7'
