@@ -427,7 +427,7 @@ def get_database_connection():
 
 ## all using functions end
 
-cursor, db = get_database_connection()
+#cursor, db = get_database_connection()
  
  
 cursor.execute('''CREATE TABLE register (
