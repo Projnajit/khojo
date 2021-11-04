@@ -354,7 +354,7 @@ def uploaded_home():
 def driver():
     st.sidebar.markdown('<p style="font-size:20px;font-weight:bold;line-height: 0pt">Touch your requirements:</p>',unsafe_allow_html=True)
     task = st.sidebar.selectbox('',('select catagory','Rent a Home',
-                                    'Buy a Home',' Upload to Sell/Rent'))
+                                    'Buy a Home','Upload to Sell/Rent'))
     if task=='Rent a Home':
         get_rent()
     elif task=='Buy a Home':
@@ -552,6 +552,24 @@ if active:
         cursor.execute(query,val)
         db.commit()
         st.success(f'{name},you registered successfully.')
+# register end
 
+    # temp=st.selectbox('Search Query',('Select Catagory','Want to see existing members?','Specific member?'))
+    # if temp=='Want to see existing members?':
+    #     cursor.execute("select full_name from register")
+    #     st.write(cursor.fetchall())
+    # elif temp=='Specific member?':
+    #     name=st.text_input('Enter Full Name')
+    #     name=name.lower()
+    #     cursor.execute("select full_name from register")
+    #     member=cursor.fetchall()
+    #     flag=0
+    #     for m in member:
+    #         if name==m[0].lower():
+    #             st.success(f'{m[0]} is already Registered.')
+    #             flag=1
+    #             break
+
+## sidebar activity start
 
 
