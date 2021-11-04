@@ -412,6 +412,7 @@ def driver():
 
  
  
+"""
 cursor.execute('''CREATE TABLE register (
      id int NOT NULL AUTO_INCREMENT,
      full_name varchar(255),
@@ -466,7 +467,8 @@ cursor.execute('''CREATE TABLE buy (
    uid varchar(255),
     PRIMARY KEY (id)
 )''')
- 
+
+"""
  
 st.markdown("""
 <style>
