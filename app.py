@@ -417,13 +417,68 @@ def get_database_connection():
                       database = db_credintials['database'],
                       auth_plugin= db_credintials['auth_plugin'])
     cursor = db.cursor()
-
-    
     return cursor, db
 ## all using functions end
 
-
 cursor, db = get_database_connection()
+ 
+ 
+ cursor.execute('''CREATE TABLE register (
+    id int NOT NULL AUTO_INCREMENT,
+    full_name varchar(255),
+    email varchar(255),
+    phone varchar(255),
+    username varchar(255),
+    password varchar(255),
+    PRIMARY KEY (id)
+)''')
+
+
+cursor.execute('''CREATE TABLE sell (
+  id varchar(255) NOT NULL AUTO_INCREMENT,
+  apartment_name varchar(255),
+  owner_name varchar(255),
+  state varchar(255),
+  address varchar(255),
+  price varchar(255),
+  room varchar(255),
+  bath varchar(255),
+  sq_ft varchar(255),
+  uid varchar(255),
+  status varchar(255),
+  submittor_id varchar(255),
+   PRIMARY KEY (id)
+)''')
+
+
+cursor.execute('''CREATE TABLE rent (
+  id varchar(255) NOT NULL AUTO_INCREMENT,
+  apartment_name varchar(255),
+  owner_name varchar(255),
+  state varchar(255),
+  address varchar(255),
+  price varchar(255),
+  room varchar(255),
+  bath varchar(255),
+  sq_ft varchar(255),
+  uid varchar(255),
+  status varchar(255),
+  submittor_id varchar(255),
+    PRIMARY KEY (id)
+)''')
+
+cursor.execute('''CREATE TABLE buy (
+  buy_id int NOT NULL AUTO_INCREMENT,
+  buyer_name varchar(255),
+  phone varchar(255),
+  email varchar(255),
+  address varchar(255),
+  type varchar(255),
+  product_id varchar(225)
+  uid varchar(255),
+   PRIMARY KEY (id)
+)''')
+ 
  
 st.markdown("""
 <style>
