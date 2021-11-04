@@ -1,37 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@Projnajit
-Projnajit /
-khojo
-Public
-
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-khojo/app.py /
-@Projnajit
-Projnajit Update app.py
-Latest commit ceaa6c3 3 minutes ago
-History
-1 contributor
-573 lines (520 sloc) 21.8 KB
 from logging import PlaceHolder
 #from multiapp import MultiApp
 import mysql.connector as mysql
