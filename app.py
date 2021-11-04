@@ -1,10 +1,8 @@
 from logging import PlaceHolder
-#from multiapp import MultiApp
 import mysql.connector as mysql
 from numpy import double
 import pandas as pd
 import time
-import yaml
 from datetime import datetime
 from PIL import Image
 import json
@@ -14,6 +12,10 @@ import yagmail
 import re
 from PIL import Image
 from re import search
+import yaml
+import mysql.connector as mysql
+from mysql.connector.constants import ClientFlag
+from sqlalchemy import create_engine
 # import smtplib
  
 import streamlit as st
@@ -404,11 +406,12 @@ def driver():
 
 
 
+
 with open('credintials.yml', 'r') as f:
     credintials = yaml.load(f, Loader=yaml.FullLoader)
     db_credintials = credintials['db']
     system_pass = credintials['system_pass']['admin']
-    email_sender = credintials['email_sender']
+    # email_sender = credintials['email_sender']
 
 
 def get_database_connection():
@@ -418,7 +421,10 @@ def get_database_connection():
                       database = db_credintials['database'],
                       auth_plugin= db_credintials['auth_plugin'])
     cursor = db.cursor()
+
     return cursor, db
+
+
 ## all using functions end
 
 cursor, db = get_database_connection()
