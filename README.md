@@ -18,13 +18,13 @@ To run the Khojo House Rental App locally, follow these steps:
 1. Clone the repository:
 
    ```
-   git clone https://github.com/Shahid-Fahad/Khojo_House_Rental_App-Django-.git
+   git clone https://github.com/Projnajit/khojo.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd Khojo_House_Rental_App-Django-
+   cd khojo-
    ```
 
 3. Create a virtual environment:
